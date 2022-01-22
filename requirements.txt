@@ -1,5 +1,0 @@
-Flask==2.0.2
-Flask-Session==0.4.0
-gunicorn==20.1.0
-
-
