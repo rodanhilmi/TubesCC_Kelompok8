@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Image Classification</title>
+  <meta charset="utf-8">
+  <link href="static/style.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <center>
+        <div class='cont1'>
+        {% if data[1] > 0.50 %}
+        <h1> Sistem Mendeteksi Wajah</h1><h2 class="hasil">"Normal"</h2>
+        
+        {%else%}
+        <h1> Sistem Mendeteksi Wajah </h1><h2 class="hasil">"Berjerawat"</h2>
+        {%endif%}
+
+    </div>
+        <h2 class="hasil1">Hasil Akurasi<br> Berjerawat: <span>{{data[0]}} %</span> <br>Normal: <span>{{data[1]}} %</span><br> </h2>
+        
+        <img src="{{url_for('load_img')}}" alt='img'><br>
+        <br><a href="/" class='btn'>Home</a></br>
+
+    </center>
+    
+</body>
+</html>
